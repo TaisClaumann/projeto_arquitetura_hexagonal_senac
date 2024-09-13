@@ -5,15 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class UsuarioDto {
+public class ReservaDto {
 
     private Long id;
-    private String nome;
-    private String cpf;
-    private String dataNascimento;
-    private boolean ativo;
+    private UsuarioDto usuarioReserva;
+    private LivroDto livroReserva;
+    private LocalDate data;
 }
