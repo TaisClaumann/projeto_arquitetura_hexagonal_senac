@@ -20,12 +20,11 @@ public class UsuarioService implements UsuarioServicePort {
 
     @Override
     public void logar(LoginDto loginDto) {
-
     }
 
     @Override
     public Usuario atualizar(Usuario usuario) {
-        return null;
+        return usuario;
     }
 
     @Override
