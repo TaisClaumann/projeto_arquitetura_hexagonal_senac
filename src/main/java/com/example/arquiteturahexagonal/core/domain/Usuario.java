@@ -8,18 +8,20 @@ public class Usuario {
     private String senha;
     private String cpf;
     private String dataNascimento;
+    private boolean ativo;
 
     public Usuario() {
 
     }
 
-    public Usuario(Long id, String nome, String email, String senha, String cpf, String dataNascimento) {
+    public Usuario(Long id, String nome, String email, String senha, String cpf, String dataNascimento, boolean ativo) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
+        this.ativo = ativo;
     }
 
     public void setId(Long id) {
@@ -46,6 +48,8 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
     }
 
+    public void setAtivo(boolean ativo) { this.ativo = ativo; }
+
     public Long getId() {
         return id;
     }
@@ -69,4 +73,6 @@ public class Usuario {
     public String getDataNascimento() {
         return dataNascimento;
     }
+
+    public boolean isAtivo() {return ativo;}
 }
