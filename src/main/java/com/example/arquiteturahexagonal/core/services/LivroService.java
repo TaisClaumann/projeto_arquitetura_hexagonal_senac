@@ -4,6 +4,7 @@ import com.example.arquiteturahexagonal.core.domain.Livro;
 import com.example.arquiteturahexagonal.core.domain.Usuario;
 import com.example.arquiteturahexagonal.core.ports.LivroServicePort;
 
+import java.util.Collections;
 import java.util.List;
 
 public class LivroService implements LivroServicePort {
@@ -35,7 +36,7 @@ public class LivroService implements LivroServicePort {
     }
 
     @Override
-    public Usuario buscarPorNome(String nome) {
-        return new Usuario();
+    public List<Livro> buscarPorNome(String nome) {
+        return Collections.emptyList();
     }
 }

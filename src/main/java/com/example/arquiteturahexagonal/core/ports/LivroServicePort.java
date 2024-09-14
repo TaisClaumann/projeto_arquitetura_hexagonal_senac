@@ -12,5 +12,5 @@ public interface LivroServicePort {
     Livro atualizar(Long id, Livro livro);
     List<Livro> buscarTodos();
     void excluir(Long id);
-    Usuario buscarPorNome(String nome);
+    List<Livro> buscarPorNome(String nome);
 }
