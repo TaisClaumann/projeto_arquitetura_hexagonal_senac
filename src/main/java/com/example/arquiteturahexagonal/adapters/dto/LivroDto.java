@@ -5,12 +5,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 public class LivroDto {
 
-    private String email;
-    private String senha;
+    private Long id;
+    private String nome;
+    private List<AutorDto> autores;
+    private List<CategoriaDto> categorias;
+    private String editora;
+    private Integer quantidade;
 }

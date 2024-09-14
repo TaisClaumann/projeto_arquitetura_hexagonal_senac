@@ -13,9 +13,9 @@ import lombok.Setter;
 public class EmprestimoDto {
 
     private Long id;
-    private UsuarioDto usuarioEmprestimo;
-    private LivroDto livroEmprestimo;
     private String dataSaida;
     private String dataVencimento;
+    private UsuarioDto usuarioEmprestimo;
+    private LivroDto livroEmprestimo;
     private StatusEnum status;
 }
