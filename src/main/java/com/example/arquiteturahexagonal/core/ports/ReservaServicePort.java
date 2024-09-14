@@ -1,6 +1,5 @@
 package com.example.arquiteturahexagonal.core.ports;
 
-import com.example.arquiteturahexagonal.core.domain.Categoria;
 import com.example.arquiteturahexagonal.core.domain.Reserva;
 
 import java.util.List;
@@ -8,8 +7,9 @@ import java.util.List;
 public interface ReservaServicePort {
 
     Reserva salvar(Reserva reserva);
-    Categoria buscarPorId(Long id);
-    Categoria atualizar(Long id, Categoria categoria);
-    List<Categoria> buscarTodos();
+    Reserva buscarPorId(Long id);
+    Reserva atualizar(Long id, Reserva reserva);
+    List<Reserva> buscarTodos();
     void excluir(Long id);
+    List<Reserva> buscarReservasPorUsuario(Long usuarioId);
 }
