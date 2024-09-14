@@ -10,6 +10,6 @@ public interface UsuarioServicePort {
     Usuario salvar(Usuario usuario);
     Usuario buscarPorId(Long id);
     void logar(LoginDto loginDto);
-    Usuario atualizar(Usuario usuario);
+    Usuario atualizar(Long id, Usuario usuario);
     List<Usuario> buscarTodos();
 }

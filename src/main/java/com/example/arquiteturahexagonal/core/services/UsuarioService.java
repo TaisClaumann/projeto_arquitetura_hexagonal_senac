@@ -23,7 +23,7 @@ public class UsuarioService implements UsuarioServicePort {
     }
 
     @Override
-    public Usuario atualizar(Usuario usuario) {
+    public Usuario atualizar(Long id, Usuario usuario) {
         return usuario;
     }
 
