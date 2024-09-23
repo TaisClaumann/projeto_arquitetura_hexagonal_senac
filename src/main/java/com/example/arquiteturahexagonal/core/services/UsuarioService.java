@@ -2,7 +2,7 @@ package com.example.arquiteturahexagonal.core.services;
 
 import com.example.arquiteturahexagonal.adapters.dto.LoginDto;
 import com.example.arquiteturahexagonal.core.domain.Usuario;
-import com.example.arquiteturahexagonal.core.ports.UsuarioServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.UsuarioServicePort;
 
 import java.util.List;
 

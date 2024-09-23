@@ -3,7 +3,7 @@ package com.example.arquiteturahexagonal.adapters.controller;
 import com.example.arquiteturahexagonal.adapters.converter.EmprestimoConverter;
 import com.example.arquiteturahexagonal.adapters.dto.EmprestimoDto;
 import com.example.arquiteturahexagonal.core.domain.Emprestimo;
-import com.example.arquiteturahexagonal.core.ports.EmprestimoServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.EmprestimoServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -2,7 +2,7 @@ package com.example.arquiteturahexagonal.adapters.controller;
 
 import com.example.arquiteturahexagonal.adapters.converter.ReservaConverter;
 import com.example.arquiteturahexagonal.adapters.dto.ReservaDto;
-import com.example.arquiteturahexagonal.core.ports.ReservaServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.ReservaServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

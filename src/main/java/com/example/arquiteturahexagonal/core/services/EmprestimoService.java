@@ -1,7 +1,7 @@
 package com.example.arquiteturahexagonal.core.services;
 
 import com.example.arquiteturahexagonal.core.domain.Emprestimo;
-import com.example.arquiteturahexagonal.core.ports.EmprestimoServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.EmprestimoServicePort;
 
 import java.util.List;
 

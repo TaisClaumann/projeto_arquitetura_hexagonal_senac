@@ -2,7 +2,7 @@ package com.example.arquiteturahexagonal.adapters.controller;
 
 import com.example.arquiteturahexagonal.adapters.converter.CategoriaConverter;
 import com.example.arquiteturahexagonal.adapters.dto.CategoriaDto;
-import com.example.arquiteturahexagonal.core.ports.CategoriaServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.CategoriaServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

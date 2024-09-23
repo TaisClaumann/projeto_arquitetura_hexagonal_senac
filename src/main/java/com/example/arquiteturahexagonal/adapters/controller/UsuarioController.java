@@ -3,7 +3,7 @@ package com.example.arquiteturahexagonal.adapters.controller;
 import com.example.arquiteturahexagonal.adapters.converter.UsuarioConverter;
 import com.example.arquiteturahexagonal.adapters.dto.LoginDto;
 import com.example.arquiteturahexagonal.adapters.dto.UsuarioDto;
-import com.example.arquiteturahexagonal.core.ports.UsuarioServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.UsuarioServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

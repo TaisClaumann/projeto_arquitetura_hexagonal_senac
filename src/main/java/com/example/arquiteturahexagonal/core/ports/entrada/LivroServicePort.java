@@ -1,7 +1,6 @@
-package com.example.arquiteturahexagonal.core.ports;
+package com.example.arquiteturahexagonal.core.ports.entrada;
 
 import com.example.arquiteturahexagonal.core.domain.Livro;
-import com.example.arquiteturahexagonal.core.domain.Usuario;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.example.arquiteturahexagonal.core.services;
 
 import com.example.arquiteturahexagonal.core.domain.Autor;
-import com.example.arquiteturahexagonal.core.ports.AutorServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.AutorServicePort;
 
 import java.util.List;
 

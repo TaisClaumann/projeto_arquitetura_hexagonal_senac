@@ -1,8 +1,7 @@
 package com.example.arquiteturahexagonal.core.services;
 
 import com.example.arquiteturahexagonal.core.domain.Livro;
-import com.example.arquiteturahexagonal.core.domain.Usuario;
-import com.example.arquiteturahexagonal.core.ports.LivroServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.LivroServicePort;
 
 import java.util.Collections;
 import java.util.List;

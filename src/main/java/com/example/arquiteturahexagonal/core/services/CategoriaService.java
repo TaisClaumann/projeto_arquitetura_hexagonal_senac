@@ -1,7 +1,7 @@
 package com.example.arquiteturahexagonal.core.services;
 
 import com.example.arquiteturahexagonal.core.domain.Categoria;
-import com.example.arquiteturahexagonal.core.ports.CategoriaServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.CategoriaServicePort;
 
 import java.util.List;
 

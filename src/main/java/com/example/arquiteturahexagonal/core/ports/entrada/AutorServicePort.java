@@ -1,4 +1,4 @@
-package com.example.arquiteturahexagonal.core.ports;
+package com.example.arquiteturahexagonal.core.ports.entrada;
 
 import com.example.arquiteturahexagonal.core.domain.Autor;
 

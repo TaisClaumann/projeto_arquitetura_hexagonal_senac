@@ -2,7 +2,7 @@ package com.example.arquiteturahexagonal.adapters.controller;
 
 import com.example.arquiteturahexagonal.adapters.converter.AutorConverter;
 import com.example.arquiteturahexagonal.adapters.dto.AutorDto;
-import com.example.arquiteturahexagonal.core.ports.AutorServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.AutorServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

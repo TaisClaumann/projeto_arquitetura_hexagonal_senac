@@ -2,7 +2,7 @@ package com.example.arquiteturahexagonal.adapters.controller;
 
 import com.example.arquiteturahexagonal.adapters.converter.LivroConverter;
 import com.example.arquiteturahexagonal.adapters.dto.LivroDto;
-import com.example.arquiteturahexagonal.core.ports.LivroServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.LivroServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

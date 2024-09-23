@@ -1,7 +1,7 @@
 package com.example.arquiteturahexagonal.core.services;
 
 import com.example.arquiteturahexagonal.core.domain.Reserva;
-import com.example.arquiteturahexagonal.core.ports.ReservaServicePort;
+import com.example.arquiteturahexagonal.core.ports.entrada.ReservaServicePort;
 
 import java.util.List;
 
