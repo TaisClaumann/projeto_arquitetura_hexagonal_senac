@@ -1,12 +1,11 @@
 package com.example.arquiteturahexagonal.adapters.converter;
 
 import com.example.arquiteturahexagonal.adapters.dto.EmprestimoDto;
+import com.example.arquiteturahexagonal.adapters.entities.EmprestimoEntity;
 import com.example.arquiteturahexagonal.core.domain.Emprestimo;
 import com.example.arquiteturahexagonal.core.utils.DataUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.Collections;
 
 @Component
 public class EmprestimoConverter {
@@ -26,12 +25,30 @@ public class EmprestimoConverter {
                 livroConverter.toDomain(emprestimoDto.getLivroEmprestimo()));
     }
 
+    public Emprestimo toDomain(EmprestimoEntity emprestimoEntity) {
+        return new Emprestimo(emprestimoEntity.getId(),
+                emprestimoEntity.getDataSaida(),
+                emprestimoEntity.getDataVencimento(),
+                emprestimoEntity.getStatus(),
+                usuarioConverter.toDomain(emprestimoEntity.getUsuario()),
+                livroConverter.toDomain(emprestimoEntity.getLivro()));
+    }
+
     public EmprestimoDto toDto(Emprestimo emprestimo) {
         return new EmprestimoDto(emprestimo.getId(),
                 DataUtils.localDateToString(emprestimo.getDataSaida()),
                 DataUtils.localDateToString(emprestimo.getDataVencimento()),
                 usuarioConverter.toDto(emprestimo.getUsuarioEmprestimo()),
                 livroConverter.toDto(emprestimo.getLivroEmprestimo()),
+                emprestimo.getStatus());
+    }
+
+    public EmprestimoEntity toEntity(Emprestimo emprestimo) {
+        return new EmprestimoEntity(emprestimo.getId(),
+                emprestimo.getDataSaida(),
+                emprestimo.getDataVencimento(),
+                usuarioConverter.toEntity(emprestimo.getUsuarioEmprestimo()),
+                livroConverter.toEntity(emprestimo.getLivroEmprestimo()),
                 emprestimo.getStatus());
     }
 }
