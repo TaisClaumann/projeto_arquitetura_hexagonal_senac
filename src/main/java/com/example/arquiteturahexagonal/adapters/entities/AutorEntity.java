@@ -1,4 +1,4 @@
-package com.example.arquiteturahexagonal.core.domain;
+package com.example.arquiteturahexagonal.adapters.entities;
 
 import java.util.List;
 
