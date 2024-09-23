@@ -4,6 +4,6 @@ import com.example.arquiteturahexagonal.core.enums.StatusEnum;
 
 import java.time.LocalDate;
 
-public class Emprestimo {
+public class EmprestimoEntity {
 
 }
