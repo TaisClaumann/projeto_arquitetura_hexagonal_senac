@@ -16,14 +16,16 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Table(name = "emprestimo")
 public class EmprestimoEntity {
-
-    @ManyToOne(cascade = CascadeType.REFRESH)
-    public UsuarioEntity usuario;
-    @ManyToOne(cascade = CascadeType.REFRESH)
-    public LivroEntity livro;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne(cascade = CascadeType.REFRESH)
+    public UsuarioEntity usuario;
+
+    @ManyToOne(cascade = CascadeType.REFRESH)
+    public LivroEntity livro;
+
     private LocalDate dataSaida;
     private LocalDate dataVencimento;
     @Enumerated(EnumType.STRING)
