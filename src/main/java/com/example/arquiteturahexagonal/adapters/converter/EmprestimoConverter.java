@@ -45,10 +45,10 @@ public class EmprestimoConverter {
 
     public EmprestimoEntity toEntity(Emprestimo emprestimo) {
         return new EmprestimoEntity(emprestimo.getId(),
-                emprestimo.getDataSaida(),
-                emprestimo.getDataVencimento(),
                 usuarioConverter.toEntity(emprestimo.getUsuarioEmprestimo()),
                 livroConverter.toEntity(emprestimo.getLivroEmprestimo()),
+                emprestimo.getDataSaida(),
+                emprestimo.getDataVencimento(),
                 emprestimo.getStatus());
     }
 }

@@ -35,7 +35,7 @@ public class UsuarioRepositoryAdapter implements UsuarioRepositoryPort {
     }
 
     @Override
-    public Usuario alterar(Usuario usuario, Long id) {
+    public Usuario atualizar(Long id, Usuario usuario) {
         buscarPorId(id);
         usuario.setId(id);
         UsuarioEntity usuarioEntity = usuarioConverter.toEntity(usuario);

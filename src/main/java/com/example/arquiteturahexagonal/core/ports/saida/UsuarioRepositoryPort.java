@@ -9,7 +9,8 @@ public interface UsuarioRepositoryPort {
 
     Usuario salvar(Usuario usuario);
     List<Usuario> buscarTodos();
-    Usuario alterar(Usuario usuario, Long id);
+
+    Usuario atualizar(Long id, Usuario usuario);
     Usuario buscarPorId(Long id);
     void logar(LoginDto login);
 

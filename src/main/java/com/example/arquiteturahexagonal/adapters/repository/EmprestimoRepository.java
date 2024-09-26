@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface EmprestimoRepository extends JpaRepository<EmprestimoEntity, Long> {
 
-    List<EmprestimoEntity> findByUsuarioEmprestimoId(Long usuarioEmprestimoId);
-    List<EmprestimoEntity> findByLivroEmprestimoIdAndStatus(Long livroEmprestimoId, StatusEnum status);
+    List<EmprestimoEntity> findByUsuarioId(Long usuarioId);
+
+    List<EmprestimoEntity> findByLivroIdAndStatus(Long livroId, StatusEnum status);
 }

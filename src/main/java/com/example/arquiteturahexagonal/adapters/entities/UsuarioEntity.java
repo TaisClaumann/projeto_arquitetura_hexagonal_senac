@@ -17,12 +17,6 @@ import java.util.List;
 @Table(name = "usuario")
 public class UsuarioEntity {
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "usuario")
-    public List<EmprestimoEntity> emprestimos;
-    @JsonIgnore
-    @OneToMany(mappedBy = "usuario")
-    public List<ReservaEntity> reservas;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,4 +26,12 @@ public class UsuarioEntity {
     private String cpf;
     private String dataNascimento;
     private boolean ativo;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "usuario")
+    public List<EmprestimoEntity> emprestimos;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "usuario")
+    public List<ReservaEntity> reservas;
 }
