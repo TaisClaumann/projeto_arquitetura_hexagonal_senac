@@ -6,6 +6,7 @@ import com.example.arquiteturahexagonal.adapters.entities.UsuarioEntity;
 import com.example.arquiteturahexagonal.adapters.repository.UsuarioRepository;
 import com.example.arquiteturahexagonal.core.domain.Usuario;
 import com.example.arquiteturahexagonal.core.ports.saida.UsuarioRepositoryPort;
+import com.example.arquiteturahexagonal.core.services.exceptions.RegistroNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -34,19 +35,23 @@ public class UsuarioRepositoryAdapter implements UsuarioRepositoryPort {
     }
 
     @Override
-    public Usuario alterar(Usuario usuario) {
-        return null;
+    public Usuario alterar(Usuario usuario, Long id) {
+        buscarPorId(id);
+        usuario.setId(id);
+        UsuarioEntity usuarioEntity = usuarioConverter.toEntity(usuario);
+        return usuarioConverter.toDomain(usuarioRepository.save(usuarioEntity));
     }
 
     @Override
     public Usuario buscarPorId(Long id) {
-//        return new Usuario(usuarioRepository.findById(id)
-//                .orElseThrow(() -> new RegistroNaoEncontradoException("Usuário não encontrado! ID: " + id)));
-        return null;
+        UsuarioEntity usuarioEntity = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RegistroNaoEncontradoException("Usuário não encontrado! ID: " + id));
+        return usuarioConverter.toDomain(usuarioEntity);
     }
 
     @Override
-    public void logar(LoginDto loginDto) {
-
+    public void logar(LoginDto login) {
+        usuarioRepository.findByEmailAndSenha(login.getEmail(), login.getSenha())
+                .orElseThrow(() -> new RegistroNaoEncontradoException("Usuário ou senha incorretos"));
     }
 }
